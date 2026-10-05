@@ -1,59 +1,64 @@
-🔗 Issue relacionado
-<!-- Ponlo primero: el revisor necesita el contexto antes de leer el código. "Closes #123" cierra el Issue automáticamente al fusionar en la rama por defecto. Si el PR no termina el Issue, usa "Refs #123". --> 
+## 🔗 Linked issue
+<!-- Primero el contexto. "Closes #12" cierra el Issue al fusionar en main.
+     Si el PR no lo termina, usa "Refs #12". Sin Issue: "N/A" y el motivo. -->
 Closes #
 
-📝 Resumen
-<!-- Qué problema resuelve y por qué. 2–3 frases. El "cómo" va en las secciones siguientes. --> 
+## 📝 Summary
+<!-- Qué problema resuelve y por qué, en 2-3 frases y en inglés:
+     es el idioma de trabajo de los equipos internacionales. -->
 
+## 🔄 Type of change
+<!-- Debe coincidir con el prefijo Conventional Commits del título. -->
+- [ ] `fix` — bug fix
+- [ ] `feat` — new feature
+- [ ] `refactor` — internal change, same behaviour
+- [ ] `perf` — performance improvement
+- [ ] `test` — tests added or changed
+- [ ] `docs` — documentation only
+- [ ] `build` / `ci` — dependencies, pipeline or configuration
+- [ ] ⚠️ `BREAKING CHANGE` — breaks compatibility (explain the migration)
 
-🔄 Tipo de cambio
-<!-- Debe coincidir con el prefijo Conventional Commits del título del PR (p. ej. "feat(ventas): ..."). --> 
-•	[ ] fix — corrige un error
-•	[ ] feat — nueva funcionalidad
-•	[ ] refactor — mejora la estructura sin cambiar el comportamiento
-•	[ ] perf — mejora de rendimiento
-•	[ ] test — añade o modifica pruebas
-•	[ ] docs — documentación
-•	[ ] build / ci — dependencias, pipeline o configuración
-•	[ ] ⚠️ BREAKING CHANGE — rompe compatibilidad (explica abajo cómo migrar)
+## 📋 What changed
+<!-- Los cambios técnicos importantes, uno por línea. -->
+-
 
-📋 Cambios realizados
-<!-- Los cambios técnicos más importantes, uno por línea. --> 
-•	
+## 🛡️ Security & supply-chain impact
+<!-- Obligatorio. Si una casilla no aplica, márcala y escribe "N/A". -->
+- [ ] No new dependencies, or each one is justified below (name, exact version, licence, why).
+- [ ] All required checks are green (SAST, SCA, secrets) and no new code-scanning alerts.
+- [ ] No secrets, tokens or personal data in the code, the commits or the logs.
+- [ ] If dependencies changed, the SBOM will be regenerated in the next release.
 
+**Findings addressed** <!-- Una fila por hallazgo. Borra la tabla si no corrige ninguno. -->
 
-🏗️ Decisiones de diseño
-<!-- Lo que el revisor no puede deducir leyendo el diff. --> 
-•	Enfoque elegido y por qué:
-•	Alternativas descartadas:
-•	Principios / patrones aplicados (si los hay): <!-- p. ej. SRP: se extrae PricingPolicy; Strategy para los transportistas -->
-•	Deuda técnica conocida que este PR no resuelve: <!-- enlaza el Issue de deuda, si existe -->
+| ID | Detected by | Rule / CVE | File:line | Category (SAST/SCA/Secret) | Severity | Resolution |
+|----|-------------|------------|-----------|----------------------------|----------|------------|
+|    |             |            |           |                            |          |            |
 
+**Accepted risks** <!-- Enlace al VEX de lo que NO se corrige y quién asume el riesgo. -->
 
-👀 Cómo revisar este PR
-<!-- Orden de lectura recomendado y en qué quieres que se fije el revisor. --> 
-1.	
+**Credentials to rotate** <!-- Toda credencial que estuvo en el historial está comprometida. -->
 
-🧪 Pruebas y evidencias
-•	[ ] Probado localmente: compila y se ejecuta sin errores.
-•	[ ] Verificado contra los criterios de aceptación del Issue.
-•	[ ] Pruebas automatizadas añadidas o actualizadas, y pasan en CI.
-•	[ ] Evidencias adjuntas (capturas, salida de consola, SPOOL o script ejecutado).
-<!-- Pega aquí las evidencias o enlázalas. --> 
+## 🏗️ Design decisions
+<!-- Lo que el revisor no puede deducir leyendo el diff. -->
+- **Approach and why:**
+- **Alternatives discarded:**
 
+## 👀 How to review
+<!-- Orden de lectura recomendado y en qué debe fijarse el revisor. -->
+1.
 
-⚠️ Riesgos e impacto
-<!-- Borra lo que no aplique. --> 
-•	Base de datos: ¿hay scripts DDL/DML? ¿Son reversibles? ¿Dónde está el script de rollback?
-•	Configuración / secretos: ¿cambian variables de entorno? (nunca credenciales en el PR)
-•	Cómo deshacerlo si falla:
+## 🧪 Testing & evidence
+- [ ] Tested locally: the service starts and the affected endpoints behave as expected.
+- [ ] `pre-commit run --all-files` passes.
+- [ ] Evidence attached (terminal output, screenshots or reports in `docs/evidencias/`).
 
-✅ Checklist del autor
-•	[ ] He hecho self-review del diff en GitHub antes de pedir revisión.
-•	[ ] El PR es pequeño (idealmente < 400 líneas cambiadas) y trata un solo tema.
-•	[ ] El Quality Gate de SonarQube está en verde y no hay avisos nuevos de linter/compilador.
-•	[ ] Los nombres revelan la intención; no hay números mágicos ni código comentado.
-•	[ ] Los comentarios explican el porqué, no el qué.
-•	[ ] No hay secretos, contraseñas ni datos personales en el código o en los commits.
-•	[ ] Si he usado asistentes de IA, he revisado y entiendo cada línea que entrego.
+## ⚠️ Risks & rollback
+<!-- Qué puede salir mal y cómo se deshace. -->
 
+## ✅ Author checklist
+- [ ] I self-reviewed the diff on GitHub before requesting review.
+- [ ] Small PR (ideally < 400 changed lines) about a single topic.
+- [ ] The PR title follows Conventional Commits.
+- [ ] Comments explain *why*, not *what*.
+- [ ] If an AI assistant was used, I reviewed and understand every line I submit.
